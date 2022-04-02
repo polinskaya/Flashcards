@@ -1,0 +1,54 @@
+body{
+    background: url("https://i.pinimg.com/564x/e6/7d/76/e67d76ce62bdbc63a756b182f6b7a025.jpg");
+    background-size: cover;
+}
+h1{
+    text-align:center;
+    color: white;
+    font-family: Gill Sans Extrabold, sans-serif;
+}
+.container {
+    width: 80vh;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: auto;
+    font-family: Gill Sans Extrabold, sans-serif;
+}
+.card{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.grid-item-back,
+.grid-item-front{
+    width: 80%;
+    height: 80%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 1.5em;
+    border-radius: 10px;
+    position: absolute;
+}
+.grid-item-front{
+    z-index: 2;
+    background: linear-gradient(#fae0c8, #d3af8e);
+    backface-visibility: hidden;
+}
+.grid-item-back{
+    z-index: 1;
+    background: linear-gradient(#d3af8e,#fae0c8);
+    transform: rotateY(180deg);
+}
+
+
